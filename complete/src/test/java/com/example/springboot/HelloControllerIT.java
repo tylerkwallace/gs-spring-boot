@@ -33,6 +33,7 @@ public class HelloControllerIT {
     public void getHello() throws Exception {
         ResponseEntity<String> response = template.getForEntity(base.toString(),
                 String.class);
-        assertThat(response.getBody()).isEqualTo("Greetings from Spring Boot!");
+        String body = response.getBody().replaceAll("[\r\n]+", "");
+        assertThat(body).isEqualTo("<!DOCTYPE HTML><html><head>    <title>Getting Started: Serving Web Content</title>    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" /></head><body>    <p >Hello, World!</p></body></html>");
     }
 }
