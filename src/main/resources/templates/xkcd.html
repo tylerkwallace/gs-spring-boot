@@ -61,12 +61,11 @@
                 url: 'https://xkcd.com/info.0.json',
                 type: 'GET',
                 dataType: "json",
-                
-                headers: {
-                    'Access-Control-Allow-Origin': 'anonymous',
-                    'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-                    'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
-    },
+    //             headers: {
+    //                 'Access-Control-Allow-Origin': 'anonymous',
+    //                 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+    //                 'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
+    // },
                 success: function(data){
                     console.log(data);
                 },
