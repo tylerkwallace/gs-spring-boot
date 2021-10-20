@@ -50,15 +50,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $.ajax({
-                url: 'https://api.nasa.gov/planetary/apod?api_key=vpJEtUF9LPXL2g20extBaeSR5Cww5JKJUWQTTJzd', //+ [[${date}]],
+                url: 'https://api.nasa.gov/planetary/apod?api_key=vpJEtUF9LPXL2g20extBaeSR5Cww5JKJUWQTTJzd&date=' + '[[${date}]]',
                 type: 'GET',
                 dataType: "json",
                 success: function(data){
                     $('.apod').html(
                         '<p class="lead">' + data.title + '\n' + data.date +
                             '</p> <img src="' + data.hdurl + 
-                            '" alt="' + data.explanation + '" height="200"> <p>' 
-                                + data.explanation + '</p> <p class="lead">' + data.date + '</p>' 
+                            '" alt="' + data.explanation + '" > <p>' 
+                                + data.explanation + '</p>' 
                     )
                 },
                 error: function(data){

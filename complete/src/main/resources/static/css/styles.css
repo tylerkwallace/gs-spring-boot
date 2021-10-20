@@ -19,3 +19,8 @@ p{
 .lead{
     padding: 0px;
 }
+
+img{
+    max-width: 50%;
+    height: auto;
+}
