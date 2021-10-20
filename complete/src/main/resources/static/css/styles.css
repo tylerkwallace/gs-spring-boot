@@ -11,3 +11,11 @@ body h1{
 .navbar-toggler{
     background-color: darkblue;
 }
+
+p{
+    padding: 25px;
+}
+
+.lead{
+    padding: 0px;
+}
